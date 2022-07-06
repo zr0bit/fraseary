@@ -1,0 +1,36 @@
+.collections-menu
+  @extends $card
+  ul
+    margin 0
+    padding 0
+    list-style none
+  li
+    margin 4px 0 0 0
+    padding 0
+    // height: 36px
+  a
+    @extend $l-18pt
+    text-decoration none
+    color _color12
+    padding 3px 0 3px 0
+    display block
+    &:hover
+      background gray(5)
+      color gray(90)
+
+    span
+      vertical-align top
+
+  &.expanded
+    .collections-list
+      overflow: auto
+      height: auto
+
+
+.collections-list
+  overflow hidden
+  height: 84px
+
+  @media (min-width: 800px)
+    overflow: auto
+    height: auto

@@ -1,0 +1,89 @@
+$card
+  padding: 16px 8px
+  background #fff
+  border-radius 8px
+  box-shadow _shadow_card;
+
+.card
+  @extend $card
+
+.card-quote
+  @extend $card
+  @extend $clearfix
+  margin 16px 0
+  @media (min-width: 800px)
+    margin 0 16px 16px
+
+  p
+    margin 0
+
+    a
+      color _color12
+      text-decoration none
+
+    a:hover
+      color lighten(_color12, 20)
+
+  .meta
+    span
+      font-weight bold
+      color _color12
+
+
+.card-loading
+  @extends $card
+  div
+    background _bg13
+    height 16px
+    border-radius 8px
+    margin 0 0 16px 0
+
+  .one
+    width 90%
+
+  .two
+    width 75%
+
+  .three
+    width 100%
+
+  .four
+    width 50%
+
+  .five
+    width 40%
+    float right
+
+  .six
+    clear both
+    width 75%
+    background #fff
+    margin-bottom 0
+
+  span
+    display inline-block
+    width 30%
+    height 16px
+    margin 0 16px 0 0
+    background _bg13
+    border-radius 16px
+
+.cards.list
+  width 100%
+  display grid
+  grid-auto-columns minmax(15rem, auto)
+  grid-template-columns repeat(auto-fill, minmax(15rem, 1fr))
+  grid-gap: 1rem;
+
+.card.list
+  text-decoration none;
+  h2
+    color _color12
+    font-size 18px
+    font-weight 400
+    line-height 24px
+    display inline
+    letter-spacing 0.03em
+
+  p
+    color _color12

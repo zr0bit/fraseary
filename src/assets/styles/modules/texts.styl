@@ -1,0 +1,59 @@
+$h2-20pt
+  font-size: 20px
+  line-height: 32px
+
+$p-16pt
+  font-size 16px
+  line-height 24px
+
+$t-16pt
+  font-size 16px
+  line-height 24px
+
+$l-18pt
+  font-size: 18px
+  line-height: 24px
+
+$l-16pt-button
+  font-size: 16px
+  line-height: 16px
+
+
+$tags
+  display block
+  margin 0
+  padding 0
+  list-style none
+  li
+    float left
+    display inline-block
+    margin 5px 5px
+  a
+    display inline-block
+    padding 3px 2px
+    text-decoration none
+
+.tag
+  a
+    &:before
+      content '#'
+      padding-right 2px
+
+.tags-quote
+  height 15px
+  @extends $tags
+  a
+    color gray(30)
+    font-size 14px
+    &:hover
+      color gray(60)
+
+.tags-landing
+  @extends $tags
+  padding 24px 0
+  a
+    font-size 16px
+    color #fff
+    &:hover
+      color #fff
+      text-decoration underline

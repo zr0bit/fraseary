@@ -1,0 +1,68 @@
+.quotes-list
+  .tiny
+    font-size 32px
+    line-height 40px
+  .small
+    font-size 28px
+    line-height 32px
+  .medium
+    font-size 22px
+    line-height 32px
+  .large
+    font-size 18px
+    line-height 24px
+
+.foot-scroll
+  width 100%
+  height 48px
+
+.author
+  display block
+  text-align right
+  width 100%
+  margin 5px 0
+  a
+    margin-left 5px
+    color _color12
+    text-decoration none
+
+  a:hover
+    text-decoration underline
+
+
+//quote detail
+.quote-detail
+  max-width 800px
+  margin 56px auto 0
+  padding 0 8px
+  .tiny
+    font-size 67px
+  .small
+    font-size 50px
+  .medium
+    font-size 37px
+  .large
+    font-size 28px
+
+.quote-main
+  @extends $card
+  padding 32px 16px
+  p
+    margin 5px 0 10px
+    color _color12
+    font-family _font_family2
+
+.quote-author
+  @extends .author
+
+.quote-share
+  margin-top 16px
+  text-align center
+
+  .label
+    display block
+    @extends $p-16pt
+    color _color12
+
+  .button-list
+    padding 0 0 16px
