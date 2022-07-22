@@ -1,5 +1,5 @@
 <script>
-	import Pic from '../pic.svelte';
+	import Pic from './pic.svelte';
 	import Icon from './icon.svelte';
 	export let list = [];
 	export let authors = [];
