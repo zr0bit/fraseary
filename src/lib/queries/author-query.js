@@ -1,4 +1,5 @@
 import Author from '../models/author.js';
+import { letters } from '../utils.js';
 
 export function countAuthors(arg = {}) {
 	return Author.estimatedDocumentCount(arg).exec();
@@ -16,6 +17,27 @@ export function getAuthorBy(arg = {}) {
 			}
 		})
 		.exec();
+}
+
+export function getAllByLetter(letter = 'a', limit = 10) {
+	let regExp = new RegExp(`^${letter}`);
+	let arg = { name: { $regex: regExp, $options: 'i' }, score: { $gte: -1 } };
+
+	return Author.find(arg)
+		.limit(limit)
+		.sort('name')
+		.select('name slug -_id')
+		.exec();
+}
+
+export function getMainAuthors(limit = 10) {
+	let letterFns = letters.map((a) => getAllByLetter(a, limit));
+
+	return Promise.all(letterFns).then((authors) => {
+		return letters.map((a, i) => {
+			return { letter: a, authors: authors[i] };
+		});
+	});
 }
 
 // Admin queries
