@@ -5,7 +5,7 @@
 <ul>
 	{#each items as item}
 		<li>
-			<a href="{url}{item.slug}">{item[name]}</a>
+			<a href="{url}/{item.slug}">{item[name]}</a>
 		</li>
 	{/each}
 </ul>
