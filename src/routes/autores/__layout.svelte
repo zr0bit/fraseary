@@ -1,14 +1,9 @@
 <script>
-	import { letters } from '$lib/utils.js';
-	import LinkList from '$ui/link-list.svelte';
-
-	const letterObjs = letters.map((a) => ({ name: a, slug: a }));
+	import Letters from '$ui/letters.svelte';
 </script>
 
 <div class="authors">
-	<nav class="letters">
-		<LinkList items={letterObjs} name="name" url="/autores/" />
-	</nav>
+	<Letters baseUrl="/autores" />
 	<section class="main">
 		<slot />
 	</section>
