@@ -13,16 +13,6 @@
 	.authors {
 		max-width: inherit;
 	}
-	.authors :global(ul) {
-		list-style: none;
-	}
-
-	.letters :global(li) {
-		float: left;
-		text-transform: uppercase;
-		margin-right: 8px;
-	}
-
 	.main {
 		clear: both;
 	}
