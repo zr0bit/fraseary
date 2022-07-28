@@ -1,12 +1,19 @@
 html
   font-size 16px
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body
   background _bg12
   overflow-y scroll
   font-family _font_family1
 
-#main
+#app
   display flex
   min-height 100vh
   flex-direction column
