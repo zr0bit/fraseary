@@ -6,7 +6,8 @@ export function get({ params }) {
 	return getAllByLetter(letter, null).then((authors) => {
 		return {
 			body: {
-				authors
+				authors,
+				letter
 			}
 		};
 	});
