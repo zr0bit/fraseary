@@ -6,8 +6,14 @@
 
 <Header />
 
-<main class="content-wrap">
+<main class="main">
 	<slot />
 </main>
 
 <Footer {list} {authors} />
+
+<style>
+	.main {
+		padding-top: 40px;
+	}
+</style>
