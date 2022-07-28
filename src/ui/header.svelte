@@ -1,9 +1,7 @@
 <script>
-	// import { link } from 'svelte-routing';
 	import Icon from './icon.svelte';
 	import Pic from './pic.svelte';
 	import SearchForm from './search-form.svelte';
-	// import SearchForm from './SearchForm.svelte';
 	import HeaderMenu from './header-menu.svelte';
 
 	let showMenu = false;
