@@ -3,6 +3,10 @@
 	export let authors;
 </script>
 
+<svelte:head>
+	<title>Todos los autores</title>
+</svelte:head>
+
 {#each authors as list}
 	<div class="authors-list">
 		<h3>{list.letter}</h3>
