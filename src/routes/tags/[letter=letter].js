@@ -6,7 +6,8 @@ export function get({ params }) {
 	return getAllByLetter(letter, null).then((tags) => {
 		return {
 			body: {
-				tags
+				tags,
+				letter
 			}
 		};
 	});
