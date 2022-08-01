@@ -1,7 +1,7 @@
 import { getAllByLetter } from '$q/author-query.js';
 
 /** @type {import('./__types/[slug]').RequestHandler} */
-export function get({ params }) {
+export function GET({ params }) {
 	const letter = params.letter;
 	return getAllByLetter(letter, null).then((authors) => {
 		return {

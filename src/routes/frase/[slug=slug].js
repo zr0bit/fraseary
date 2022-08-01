@@ -1,7 +1,7 @@
 import { getQuoteBy } from '$q/quote-query.js';
 
 /** @type {import('./__types/[slug]').RequestHandler} */
-export function get({ params }) {
+export function GET({ params }) {
 	const slug = params.slug;
 	return getQuoteBy({ slug: slug }).then((quote) => {
 		return {

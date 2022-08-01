@@ -1,7 +1,7 @@
 import { getPagQuotes } from '$q/quote-query.js';
 
 /** @type {import('./__types/[id]').RequestHandler} */
-export function get({ params }) {
+export function GET({ params }) {
 	const nPage = parseInt(params.page, 10);
 	const nItems = 10;
 	return getPagQuotes({}, nItems, nPage).then((data) => {
