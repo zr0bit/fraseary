@@ -26,7 +26,8 @@ const authorSchema = new Schema(
 			resume: String,
 			meta: [{ _id: false, label: String, value: String }]
 		},
-		metas: metas
+		metas: metas,
+		flags: { type: Number, default: 2, index: true }
 	},
 	config
 );

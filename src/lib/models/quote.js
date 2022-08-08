@@ -28,7 +28,8 @@ const quoteSchema = new Schema(
 		author: { type: Schema.Types.ObjectId, ref: 'Author' },
 		tags: [{ type: Schema.Types.ObjectId, ref: 'Tag' }],
 		lists: [{ type: Schema.Types.ObjectId, ref: 'List' }],
-		metas: metas
+		metas: metas,
+		flags: { type: Number, default: 0, index: true }
 	},
 	config
 );

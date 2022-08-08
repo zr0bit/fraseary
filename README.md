@@ -127,3 +127,38 @@ tags: 858
 
 ## Descargar de servidor vía scp:
 - `scp -r <user>@<remote_host>:/path/to/remote/dir/ /path/to/dir/`
+
+
+#Data base flags
+## Authors flags
+1. isDeleted
+2. isPerson
+
+|isDeleted| 0 | 0 | 0 | 1 |
+|---------|---|---|---|---|
+|isPerson | 0 | 0 | 1 | 0 |
+|---------|---|---|---|---|
+|x        | 0 | 1 | 0 | 0 |
+|---------|---|---|---|---|
+|y        | 1 | 0 | 0 | 0 |
+|---------|---|---|---|---|
+
+
+|default  | 0 | 0 | 1 | 0 | = 2
+
+|ejm x    | 0 | 0 | 1 | 0 | = 2
+|ejm y    | 0 | 1 | 1 | 1 | = 7
+|ejm z    | 1 | 0 | 1 | 0 | = 10
+
+
+## Quote flags
+1. isDeleted
+2. isAdage
+
+
+|isDeleted| 0 | 0 | 0 | 1 |
+|---------|---|---|---|---|
+|isAdage  | 0 | 0 | 1 | 0 |
+|---------|---|---|---|---|
+
+|default  | 0 | 0 | 0 | 0 | = 0
