@@ -74,6 +74,21 @@
       "inverseOf": null,
       "validations": []
     }, {
+      "field": "flags",
+      "type": "Number",
+      "defaultValue": 2,
+      "enums": null,
+      "integration": null,
+      "isFilterable": true,
+      "isPrimaryKey": false,
+      "isReadOnly": false,
+      "isRequired": false,
+      "isSortable": true,
+      "isVirtual": false,
+      "reference": null,
+      "inverseOf": null,
+      "validations": []
+    }, {
       "field": "metas",
       "type": {
         "fields": [{
@@ -520,6 +535,21 @@
       "inverseOf": null,
       "validations": []
     }, {
+      "field": "flags",
+      "type": "Number",
+      "defaultValue": 0,
+      "enums": null,
+      "integration": null,
+      "isFilterable": true,
+      "isPrimaryKey": false,
+      "isReadOnly": false,
+      "isRequired": false,
+      "isSortable": true,
+      "isVirtual": false,
+      "reference": null,
+      "inverseOf": null,
+      "validations": []
+    }, {
       "field": "hashId",
       "type": "String",
       "defaultValue": null,
@@ -787,12 +817,12 @@
   }],
   "meta": {
     "liana": "forest-express-mongoose",
-    "liana_version": "8.7.3",
+    "liana_version": "8.7.6",
     "stack": {
       "database_type": "MongoDB",
       "engine": "nodejs",
       "engine_version": "16.15.0",
-      "orm_version": "6.4.3"
+      "orm_version": "6.5.0"
     }
   }
 }
