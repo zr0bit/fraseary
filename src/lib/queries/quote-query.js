@@ -1,5 +1,6 @@
 import Quote from '../models/quote.js';
 import { getTagBySlug } from './tag-query.js';
+import { listBySlug } from './list-query.js';
 
 export function countQuotes(arg = {}) {
 	return Quote.estimatedDocumentCount(arg).exec();
@@ -51,6 +52,17 @@ export function getPagQuotesByTag(slug, nItems = 10, nPage = 1) {
 		});
 	});
 }
+
+export function quotesByList(slug, nItems = 10, nPage = 1) {
+	return new Promise((resolve) => {
+		listBySlug(slug).then((list) => {
+			getPagQuotes({ lists: list._id }, nItems, nPage).then((data) => {
+				resolve({ list, ...data });
+			});
+		});
+	});
+}
+
 // Collection query
 export function getQuotes2(arg = {}, start = 0, end = 0) {
 	return Quote.find(arg)
