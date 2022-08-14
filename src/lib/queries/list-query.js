@@ -4,8 +4,12 @@ export function count(arg = {}) {
 	return List.estimatedDocumentCount(arg).exec();
 }
 
-export function getBySlug(slug) {
+export function listBySlug(slug) {
 	return List.findOne({ slug }).select('title slug _id').exec();
+}
+
+export function idBySlug(slug) {
+	return List.findOne({ slug }).select('_id').exec();
 }
 
 export function getAll(arg = {}, nItems = 10, nPage = 1) {
