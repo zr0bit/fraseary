@@ -5,7 +5,7 @@ export function countTags(arg = {}) {
 	return Tag.estimatedDocumentCount(arg).exec();
 }
 
-export function getTagBySlug(slug) {
+export function tagBySlug(slug) {
 	return Tag.findOne({ slug }).select('name slug _id').exec();
 }
 
