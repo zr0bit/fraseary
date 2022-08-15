@@ -6,7 +6,7 @@
 <ul class={cls}>
 	{#each tags as tag}
 		<li class="tag">
-			<a href="/tags/{tag.slug}">{tag.name}</a>
+			<a href="/tag/{tag.slug}">{tag.name}</a>
 		</li>
 	{/each}
 </ul>
