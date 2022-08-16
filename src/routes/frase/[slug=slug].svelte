@@ -1,6 +1,5 @@
 <script>
 	import Quote from '$ui/quote-detail.svelte';
-
 	export let quote;
 </script>
 

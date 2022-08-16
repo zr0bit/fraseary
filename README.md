@@ -149,8 +149,6 @@ tags: 858
 |ejm x    | 0 | 0 | 1 | 0 | = 2
 |ejm y    | 0 | 1 | 1 | 1 | = 7
 |ejm z    | 1 | 0 | 1 | 0 | = 10
-|hitler   | 0 | 0 | 1 | 1 | = 11
-
 
 ## Quote flags
 1. isDeleted
