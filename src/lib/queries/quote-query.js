@@ -1,5 +1,7 @@
 import Quote from '../models/quote.js';
+
 import { getTagBySlug, tagBySlug } from './tag-query.js';
+
 import { listBySlug } from './list-query.js';
 
 export function countQuotes(arg = {}) {
