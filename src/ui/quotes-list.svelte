@@ -70,6 +70,7 @@
 			<LoadingQuote />
 		{/if}
 	{:else}
+		<span>haz llegado al final</span>
 		<span>Cargando...</span>
 	{/if}
 	<div class="foot-scroll" />
