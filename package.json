@@ -39,7 +39,7 @@
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
-		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"lint": "prettier --check --plugin-search-dir=&& eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"serve": "HOST=localhost PORT=3000 node build",
 		"admin": "node ./src/lib/admin.js",
