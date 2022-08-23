@@ -1,6 +1,6 @@
 import Quote from '../models/quote.js';
 
-import { getTagBySlug, tagBySlug } from './tag-query.js';
+import { tagBySlug } from './tag-query.js';
 
 import { listBySlug } from './list-query.js';
 
@@ -42,7 +42,7 @@ export function getPagQuotes(arg = {}, nItems = 10, nPage = 1) {
 
 export function getPagQuotesByTag(slug, nItems = 10, nPage = 1) {
 	return new Promise((resolve) => {
-		getTagBySlug(slug).then((tag) => {
+		tagBySlug(slug).then((tag) => {
 			getPagQuotes({ tags: tag._id }, nItems, nPage).then((quotes) => {
 				resolve({
 					tag,
