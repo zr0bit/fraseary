@@ -6,8 +6,10 @@
  */
 
 import {
+	ENV,
 	ADMIN_PORT,
 	DEV_DB_CLOUD,
+	PROD_DB,
 	FOREST_ENV_SECRET,
 	FOREST_AUTH_SECRET
 } from './config.js';
@@ -23,7 +25,11 @@ import './models/index.js';
 const app = express();
 
 // Mongoose connection
-mongoose.connect(DEV_DB_CLOUD);
+if(ENV==='dev'){
+	mongoose.connect(DEV_DB_CLOUD);
+} else if(ENV==='prod'){
+	mongoose.connect(PROD_DB);
+}
 
 // Database
 const db = mongoose.connection;
