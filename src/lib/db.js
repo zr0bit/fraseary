@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { DEV_DB_CLOUD } from './config.js';
+import { PROD_DB, DEV_DB_CLOUD } from './config.js';
 
 import './models/index.js';
 
@@ -13,11 +13,11 @@ if (process.env.DB_ENV === 'test') {
 		console.log('####> Dev Env: Local <####');
 		mongoose.connect('mongodb://localhost/fraseary-test');
 	}
-} else if (process.env.NODE_ENV === 'production') {
+} else if (process.env.ENV === 'prod') {
 	// mongoose.connect('mongodb://localhost/db-fr-prod-1');
 	// mongoose.connect('mongodb://localhost/fraseary-local-copy');
-	mongoose.connect(DEV_DB_CLOUD);
-} else {
+	mongoose.connect(PROD_DB);
+} else if(process.env.ENV === 'dev'){
 	//connect to local mongodb for dev env
 	// mongoose.connect('mongodb://localhost/fraseary-local-copy', { useNewUrlParser: true, useUnifiedTopology: true});
 
