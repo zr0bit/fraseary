@@ -44,6 +44,8 @@
 		"format": "prettier --write --plugin-search-dir=. .",
 		"serve": "HOST=localhost PORT=3000 node build",
 		"admin": "node ./src/lib/admin.js",
+		"admin-prod": "NODE_ENV=production node src/lib/admin.js",
+
 		"static": "node ./src/lib/static.js"
 	}
 }
