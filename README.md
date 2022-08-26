@@ -161,3 +161,7 @@ tags: 858
 |---------|---|---|---|---|
 
 |default  | 0 | 0 | 0 | 0 | = 0
+
+
+## PM2
+`HOST=localhost PORT=3000 pm2 start ./build/index.js --name fr`
