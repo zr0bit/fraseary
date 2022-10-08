@@ -821,7 +821,7 @@
     "stack": {
       "database_type": "MongoDB",
       "engine": "nodejs",
-      "engine_version": "16.15.0",
+      "engine_version": "16.17.1",
       "orm_version": "6.5.0"
     }
   }
