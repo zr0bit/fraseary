@@ -10,14 +10,14 @@
 	import Quotes from '$ui/quotes-list.svelte';
 
 	export let data;
-	export let tags;
-	export let quotes;
+	// export let tags;
+	// export let quotes;
 
-	const data = { list, authors };
+	// const data = { list, authors };
 
 	let allQuotes = data.quotes.quotes;
 	let next = data.quotes.next;
-	const url = `/quotes`;
+	const url = '/quotes';
 
 	setContext('from', 'HOME');
 </script>
